@@ -7,6 +7,7 @@
 
 #import "Calculator.h"
 
+
 @implementation Calculator
 
 +(CGFloat) summ:(CGFloat)a with:(CGFloat)b{
@@ -27,16 +28,16 @@
 
 +(CGFloat) calculate:(ArifmeticOperations)method :(CGFloat)a :(CGFloat)b{
     switch (method) {
-        case Summ:
+        case ArifmeticOperationsSumm:
             return [Calculator summ: a with: b];
             break;
-        case Sub:
+        case ArifmeticOperationsSub:
             return [Calculator sub: a with: b];
             break;
-        case Mult:
+        case ArifmeticOperationsMult:
             return [Calculator mult: a with: b];
             break;
-        case Div:
+        case ArifmeticOperationsDiv:
             return [Calculator div: a with: b];
             break;
         default:

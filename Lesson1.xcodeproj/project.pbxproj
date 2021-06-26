@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4C0276A9267F216D00053EB6 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0276A8267F216D00053EB6 /* Calculator.m */; };
-		4C0276AD267F352500053EB6 /* EnglishAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0276AC267F352500053EB6 /* EnglishAlphabet.m */; };
 		4CD353CB267BAD63003ED29C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD353CA267BAD63003ED29C /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +26,6 @@
 /* Begin PBXFileReference section */
 		4C0276A7267F216D00053EB6 /* Calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		4C0276A8267F216D00053EB6 /* Calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
-		4C0276AB267F352500053EB6 /* EnglishAlphabet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnglishAlphabet.h; sourceTree = "<group>"; };
-		4C0276AC267F352500053EB6 /* EnglishAlphabet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnglishAlphabet.m; sourceTree = "<group>"; };
 		4CD353C7267BAD63003ED29C /* Lesson1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lesson1; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD353CA267BAD63003ED29C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,12 +61,18 @@
 			isa = PBXGroup;
 			children = (
 				4CD353CA267BAD63003ED29C /* main.m */,
-				4C0276AB267F352500053EB6 /* EnglishAlphabet.h */,
-				4C0276AC267F352500053EB6 /* EnglishAlphabet.m */,
+				4CFC83722687179F006C8627 /* Calculator */,
+			);
+			path = Lesson1;
+			sourceTree = "<group>";
+		};
+		4CFC83722687179F006C8627 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
 				4C0276A7267F216D00053EB6 /* Calculator.h */,
 				4C0276A8267F216D00053EB6 /* Calculator.m */,
 			);
-			path = Lesson1;
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +133,6 @@
 			files = (
 				4CD353CB267BAD63003ED29C /* main.m in Sources */,
 				4C0276A9267F216D00053EB6 /* Calculator.m in Sources */,
-				4C0276AD267F352500053EB6 /* EnglishAlphabet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

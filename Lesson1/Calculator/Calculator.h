@@ -10,11 +10,16 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Calculator : NSObject
-typedef enum{
-  Summ, Sub, Mult, Div
-} ArifmeticOperations;
+
+typedef NS_ENUM(NSUInteger, ArifmeticOperations) {
+    ArifmeticOperationsSumm,
+    ArifmeticOperationsSub,
+    ArifmeticOperationsMult,
+    ArifmeticOperationsDiv
+};
 
 +(CGFloat) calculate:(ArifmeticOperations)method :(CGFloat)a :(CGFloat)b;
+
 
 
 @end
