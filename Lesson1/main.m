@@ -7,40 +7,85 @@
 
 #import <Foundation/Foundation.h>
 #import "Calculator.h"
-#import "EnglishAlphabet.h"
+
+typedef NS_ENUM(NSUInteger, Garden) {
+    GardenWithTree,
+    GardenWithFlowers,
+    GardenWithMushrooms,
+    GardenNo
+};
+
+struct Human {
+    NSString * name;
+    NSInteger age;
+    Garden garden;
+};
+typedef struct Human Human;
+
+void humanToLog(Human human) {
+    
+    NSString * gardenName;
+    
+    switch (human.garden) {
+        case GardenWithTree:
+            gardenName = @"Garden With Tree";
+            break;
+        case GardenWithFlowers:
+            gardenName = @"Garden With Flowers";
+            break;
+        case GardenWithMushrooms:
+            gardenName = @"Garden With Mushrooms";
+            break;
+        case GardenNo:
+            gardenName = @"No Garden";
+            break;
+        default:
+            gardenName = @"Unknown Garden";
+            break;
+    }
+    
+    NSLog(@"Human name is:%@, age:%ld, %@", human.name, human.age, gardenName);
+    return;
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        CGFloat a = [Calculator calculate:Summ :10 :20];
-        CGFloat b = [Calculator calculate:Sub :10 :20];
-        CGFloat c = [Calculator calculate:Mult :10 :20];
-        CGFloat d = [Calculator calculate:Div :10 :20];
-        
+        CGFloat a = [Calculator calculate:ArifmeticOperationsSumm :10 :20];
+        CGFloat b = [Calculator calculate:ArifmeticOperationsSub :10 :20];
+        CGFloat c = [Calculator calculate:ArifmeticOperationsMult :10 :20];
+        CGFloat d = [Calculator calculate:ArifmeticOperationsDiv :10 :20];
+
         NSLog(@"Result: \n a = %f, \n b = %f, \n c = %f, \n d = %f", a, b, c, d);
         
+    
+        char paramString[40];
+        NSLog(@"Enter string of parameters:");
+        int nChars = scanf("%s", paramString);
+        NSLog(@"%i", nChars);
+        for (int i = 0; i < nChars; i++) {
+            NSLog(@"%c", paramString[i]);
+        }
+        int i = 0;
+        do {
+            NSLog(@"%c", paramString[i]);
+            i++;
+        } while ( i < nChars);
         
-        char word[1];
-        NSLog(@"Enter one letter:\n");
-        scanf("%1s", word);
-        NSLog(@"\nYour symbol: %c", word[0]);
-        
-        NSString* letter = [NSString stringWithCString:word encoding:1];
-        if ([EnglishAlphabet checkLette:letter]){
-            NSLog(@"\nYou entered English letter: %@",letter);
-        }else{
-            NSLog(@"\nYou entered NOT English letter: %@",letter);
+        int j = 0;
+        while (j < nChars) {
+            NSLog(@"%c", paramString[j]);
+            j++;
         }
 
         
-
+        Human human1 = {@"Petya", 15, GardenWithTree};
+        Human human2 = {@"Lida", 25, GardenWithFlowers};
+        Human human3 = {@"Egor", 10, GardenWithMushrooms};
         
-//        for (char c = 'a'; c <= 'z'; c++) {
-//            NSString *firstLetter = [NSString stringWithFormat:@"%c", c];
-//            NSInteger asciiCode = [firstLetter characterAtIndex:0];
-//            NSLog(@"%@ = %li",firstLetter, asciiCode);
-//        }
-
+        humanToLog(human1);
+        humanToLog(human2);
+        humanToLog(human3);
     }
     return 0;
 }
