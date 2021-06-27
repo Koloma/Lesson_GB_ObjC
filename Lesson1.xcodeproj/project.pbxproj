@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C9283F82687668A009690A1 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9283F72687668A009690A1 /* Student.m */; };
 		4CD353CB267BAD63003ED29C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD353CA267BAD63003ED29C /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C9283F62687668A009690A1 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		4C9283F72687668A009690A1 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		4CD353C7267BAD63003ED29C /* Lesson1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lesson1; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD353CA267BAD63003ED29C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C9283FA26876690009690A1 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				4C9283F62687668A009690A1 /* Student.h */,
+				4C9283F72687668A009690A1 /* Student.m */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
 		4CD353BE267BAD63003ED29C = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				4CD353CA267BAD63003ED29C /* main.m */,
+				4C9283FA26876690009690A1 /* Student */,
 			);
 			path = Lesson1;
 			sourceTree = "<group>";
@@ -119,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD353CB267BAD63003ED29C /* main.m in Sources */,
+				4C9283F82687668A009690A1 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
