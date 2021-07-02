@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, ArifmeticOperations) {
     ArifmeticOperationsDiv
 };
 
-+(CGFloat) calculate:(ArifmeticOperations)method :(CGFloat)a :(CGFloat)b;
+-(CGFloat) calculate:(ArifmeticOperations)method :(CGFloat)a :(CGFloat)b;
 
 
 

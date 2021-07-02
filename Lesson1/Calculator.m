@@ -10,35 +10,35 @@
 
 @implementation Calculator
 
-+(CGFloat) summ:(CGFloat)a with:(CGFloat)b{
+-(CGFloat) summ:(CGFloat)a with:(CGFloat)b{
     return a + b;
 }
 
-+(CGFloat) sub:(CGFloat)a with:(CGFloat)b{
+-(CGFloat) sub:(CGFloat)a with:(CGFloat)b{
     return a - b;
 }
 
-+(CGFloat) mult:(CGFloat)a with:(CGFloat)b{
+-(CGFloat) mult:(CGFloat)a with:(CGFloat)b{
     return a * b;
 }
 
-+(CGFloat) div:(CGFloat)a with:(CGFloat)b{
+-(CGFloat) div:(CGFloat)a with:(CGFloat)b{
     return a/b;
 }
 
-+(CGFloat) calculate:(ArifmeticOperations)method :(CGFloat)a :(CGFloat)b{
+-(CGFloat) calculate:(ArifmeticOperations)method :(CGFloat)a :(CGFloat)b{
     switch (method) {
         case ArifmeticOperationsSumm:
-            return [Calculator summ: a with: b];
+            return [self summ: a with: b];
             break;
         case ArifmeticOperationsSub:
-            return [Calculator sub: a with: b];
+            return [self sub: a with: b];
             break;
         case ArifmeticOperationsMult:
-            return [Calculator mult: a with: b];
+            return [self mult: a with: b];
             break;
         case ArifmeticOperationsDiv:
-            return [Calculator div: a with: b];
+            return [self div: a with: b];
             break;
         default:
             //Throw error
@@ -47,6 +47,20 @@
     }
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        NSLog(@"Calculator init");
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    NSLog(@"Calculator dealloc");
+    [super dealloc];
+}
 
 @end
 
