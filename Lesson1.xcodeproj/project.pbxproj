@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C4C8D4E268F2A2C0070C262 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C8D4D268F2A2C0070C262 /* Calculator.m */; };
+		4C4C8D55268F2DE10070C262 /* Flock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C8D54268F2DE10070C262 /* Flock.m */; };
+		4C4C8D59268F2DF40070C262 /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C8D58268F2DF40070C262 /* Bird.m */; };
 		4CD353CB267BAD63003ED29C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD353CA267BAD63003ED29C /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C4C8D4C268F2A2C0070C262 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		4C4C8D4D268F2A2C0070C262 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		4C4C8D53268F2DE10070C262 /* Flock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flock.h; sourceTree = "<group>"; };
+		4C4C8D54268F2DE10070C262 /* Flock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Flock.m; sourceTree = "<group>"; };
+		4C4C8D57268F2DF40070C262 /* Bird.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
+		4C4C8D58268F2DF40070C262 /* Bird.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
 		4CD353C7267BAD63003ED29C /* Lesson1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lesson1; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD353CA267BAD63003ED29C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +47,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C4C8D50268F2A3C0070C262 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				4C4C8D4C268F2A2C0070C262 /* Calculator.h */,
+				4C4C8D4D268F2A2C0070C262 /* Calculator.m */,
+			);
+			name = Calculator;
+			sourceTree = "<group>";
+		};
+		4C4C8D5B268F2E040070C262 /* FlockOfBirds */ = {
+			isa = PBXGroup;
+			children = (
+				4C4C8D53268F2DE10070C262 /* Flock.h */,
+				4C4C8D54268F2DE10070C262 /* Flock.m */,
+				4C4C8D57268F2DF40070C262 /* Bird.h */,
+				4C4C8D58268F2DF40070C262 /* Bird.m */,
+			);
+			path = FlockOfBirds;
+			sourceTree = "<group>";
+		};
 		4CD353BE267BAD63003ED29C = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				4CD353CA267BAD63003ED29C /* main.m */,
+				4C4C8D5B268F2E040070C262 /* FlockOfBirds */,
+				4C4C8D50268F2A3C0070C262 /* Calculator */,
 			);
 			path = Lesson1;
 			sourceTree = "<group>";
@@ -118,7 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4C8D55268F2DE10070C262 /* Flock.m in Sources */,
 				4CD353CB267BAD63003ED29C /* main.m in Sources */,
+				4C4C8D59268F2DF40070C262 /* Bird.m in Sources */,
+				4C4C8D4E268F2A2C0070C262 /* Calculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +168,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -193,7 +227,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
