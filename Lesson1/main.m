@@ -15,6 +15,7 @@ int main(int argc, const char * argv[]) {
         CGFloat secondNumber = 25.0;
         
         CGFloat result = [Calculator beginOperation:ArifmeticOperationsSumm firstNumber:firstNumber secondNumber:secondNumber];
+        
         NSLog(@"%0.1f",result);
         
         __block CGFloat blockResult;
@@ -42,6 +43,29 @@ int main(int argc, const char * argv[]) {
                 }];
         
         
+        __block CGFloat serialQueueResult;
+        
+        dispatch_queue_t serialQueue = dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0);
+        
+        dispatch_sync(serialQueue, ^{
+            serialQueueResult = [Calculator beginOperation:ArifmeticOperationsSumm firstNumber:firstNumber secondNumber:secondNumber];
+            NSLog(@"serialQueue1 result = %0.1f",serialQueueResult);
+        });
+        
+        dispatch_sync(serialQueue, ^{
+            serialQueueResult = [Calculator beginOperation:ArifmeticOperationsSub firstNumber:100 secondNumber:serialQueueResult];
+            NSLog(@"serialQueue2 result = %0.1f",serialQueueResult);
+        });
+        
+        dispatch_sync(serialQueue, ^{
+            serialQueueResult = [Calculator beginOperation:ArifmeticOperationsDiv firstNumber:serialQueueResult secondNumber:100];
+            NSLog(@"serialQueue3 result = %f",serialQueueResult);
+        });
+        
+        dispatch_sync(serialQueue, ^{
+            serialQueueResult = [Calculator beginOperation:ArifmeticOperationsMult firstNumber:serialQueueResult secondNumber:100];
+            NSLog(@"serialQueue4 result = %f",blockResult);
+        });
         
         sleep(1.0);
     }
